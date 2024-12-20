@@ -12,63 +12,91 @@
     <body>
         <header>
             <h1>CSS Snippets</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis totam dolorem sequi, voluptatem fugit corrupti eius sint fugiat. Nam omnis ab rerum mollitia sequi, sit debitis quod? Sed, ex quae.</p>
+            <p>Snippets of CSS used to make this page! Simply click a code area to highlight all of it.</p>
         </header>
 
         <main>
             <section>
                 <div class="card-top">
-                    <h2>Topic 1</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h2>Root</h2>
+                    <p>Sets variables for the colors used</p>
                 </div>
                 <pre>
-                    
-                </pre>
+:root{
+    --primary: #771177;
+    --secondary: #241177;
+    --primary-text: white;
+}</pre>
             </section>
             <section>
                 <div class="card-top">
-                    <h2>Topic 2</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h2>Header</h2>
+                    <p>Gives header a gradient and centers text</p>
                 </div>
                 <pre>
-                    
-                </pre>
+header{
+    display: block;
+    text-align: center;
+    background: linear-gradient(var(--primary), var(--secondary));
+    color: var(--primary-text);
+    padding: 20px 30px;
+}</pre>
             </section>
             <section>
                 <div class="card-top">
-                    <h2>Topic 3</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h2>Cards</h2>
+                    <p>CSS used to make these cards</p>
                 </div>
                 <pre>
-                    
-                </pre>
+main section{
+    width: 30%;
+    border: black solid 3px;
+    margin: 10px 0px;
+    padding: 1px;
+    background-color: gray;
+    transition: width 1s ease-in-out;
+}</pre>
             </section>
             <section>
                 <div class="card-top">
-                    <h2>Topic 4</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h2>Hover behavior</h2>
+                    <p>Cards widen when the cursor is hovered over them</p>
                 </div>
                 <pre>
-                    
-                </pre>
+main section:hover{
+    width: 35%;
+}</pre>
             </section>
             <section>
                 <div class="card-top">
-                <h2>Topic 5</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h2>Smaller screens</h2>
+                <p>Less cards per row when on a smaller screen</p>
                 </div>
                 <pre>
-                    
-                </pre>
+@media screen and (max-width: 992px){
+    main section{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    main section{
+        width: 90%;
+    }
+}</pre>
             </section>
             <section>
                 <div class="card-top">
-                    <h2>Topic 6</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h2>Code section</h2>
+                    <p>Code used to style the code snippers and make them easily clickable</p>
                 </div>
                 <pre>
-                    
-                </pre>
+main section pre{
+    font-family: monospace;
+    padding: 10px 20px;
+    text-wrap: wrap;
+    user-select: all;
+}</pre>
             </section>
         </main>
 
